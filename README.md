@@ -11,14 +11,14 @@ Basic knowledge of SSH and Linux commands
 
 # Steps
 
-# 1.Launch EC2 Instances
+# 1. Launch EC2 Instances
 
 Start Server in your AWS account.
 
 Connect to Server using MobaXterm or gitbash or CMD
 
 
-# 2.Navigate to .ssh Directory on Server
+# 2. Navigate to .ssh Directory on Server
 
 **'cd .ssh/'** 
 

@@ -3,9 +3,9 @@ This repository provides step-by-step instructions on how to establish an SSH co
 
 # Prerequisites
 
-One running EC2 instances (e.g., Server1)
+One running EC2 instances (e.g., Server)
 
-Access to both instances (e.g., via MobaXterm for Server1)
+Access to both instances (e.g., via MobaXterm for Server)
 
 Basic knowledge of SSH and Linux commands
 
@@ -18,15 +18,15 @@ Start Server1 in your AWS account.
 Connect to Server1 using MobaXterm.
 
 
-# 2.Navigate to .ssh Directory on Server2
+# 2.Navigate to .ssh Directory on Server
 
-# cd .ssh/ 
+cd .ssh/ 
 
 You will see the existing authorized_keys file.
 
 # 3. Generate SSH Keys on Server1
 
-# ssh-keygen
+ssh-keygen
 
 This will create a new pair of public and private keys.
 
@@ -38,19 +38,21 @@ Copy the generated public key to the authorized_keys file so that connections ca
 
 From your local PowerShell terminal, navigate to the downloads directory:
 
-# cd ~/Downloads
-# ls -la | grep key
+[cd ~/Downloads]
 
-# 6. Create a Directory for Server2 Keys
+ls -la | grep key
 
-# mkdir Linux-Server1
-# cd Linux-Server1
+# 6. Create a Directory for Server Keys
 
-# 7. Securely Copy the Key from Server2
+mkdir Linux-Server1
 
-Use scp to copy the key from Server2 to your local machine:
+cd Linux-Server1
 
-# scp -i ./<KeyName> ubuntu@<Server2-Public-IP>:/home/ubuntu/.ssh/id_rsa .
+# 7. Securely Copy the Key from Server
+
+Use scp to copy the key from Server to your local machine:
+
+scp -i ./<KeyName> ubuntu@<Server2-Public-IP>:/home/ubuntu/.ssh/id_rsa .
 
 Replace <KeyName> with your actual private key file and <Server2-Public-IP> with your instance’s public IP.
 

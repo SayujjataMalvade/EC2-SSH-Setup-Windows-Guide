@@ -44,17 +44,17 @@ ls -la | grep key
 
 # 6. Create a Directory for Server Keys
 
-mkdir Linux-Server1
+mkdir Linux-Server
 
-cd Linux-Server1
+cd Linux-Server
 
 # 7. Securely Copy the Key from Server
 
 Use scp to copy the key from Server to your local machine:
 
-scp -i ./<KeyName> ubuntu@<Server2-Public-IP>:/home/ubuntu/.ssh/id_rsa .
+scp -i ./<KeyName> ubuntu@<Server-Public-IP>:/home/ubuntu/.ssh/id_rsa .
 
-Replace <KeyName> with your actual private key file and <Server2-Public-IP> with your instance’s public IP.
+Replace <KeyName> with your actual private key file and <Server-Public-IP> with your instance’s public IP.
 
 # Outcome
 

@@ -13,9 +13,9 @@ Basic knowledge of SSH and Linux commands
 
 # 1.Launch EC2 Instances
 
-Start Server1 in your AWS account.
+Start Server in your AWS account.
 
-Connect to Server1 using MobaXterm.
+Connect to Server using MobaXterm or gitbash or CMD
 
 
 # 2.Navigate to .ssh Directory on Server

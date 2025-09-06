@@ -20,13 +20,13 @@ Connect to Server using MobaXterm or gitbash or CMD
 
 # 2. Navigate to .ssh Directory on Server
 ```groovy
-**'cd .ssh/'** 
+cd .ssh/ 
 ```
 You will see the existing authorized_keys file.
 
 # 3. Generate SSH Keys on Server1
 ```groovy
-**'ssh-keygen'**
+ssh-keygen
 ```
 This will create a new pair of public and private keys.
 
@@ -38,21 +38,21 @@ Copy the generated public key to the authorized_keys file so that connections ca
 
 From your local PowerShell terminal, navigate to the downloads directory:
 ```groovy
-**'[cd ~/Downloads]'**
+[cd ~/Downloads]
 
-'**ls -la | grep key**'
+ls -la | grep key
 ```
 # 6. Create a Directory for Server Keys
 ```groovy
-**'mkdir Linux-Server'**
+mkdir Linux-Server
 
-'**cd Linux-Server'**
+cd Linux-Server
 ```
 # 7. Securely Copy the Key from Server
 
 Use scp to copy the key from Server to your local machine:
 ```groovy
-**'scp -i ./<KeyName> ubuntu@<Server-Public-IP>:/home/ubuntu/.ssh/id_rsa .'**
+scp -i ./<KeyName> ubuntu@<Server-Public-IP>:/home/ubuntu/.ssh/id_rsa .
 ```
 Replace <KeyName> with your actual private key file and <Server-Public-IP> with your instance’s public IP.
 
